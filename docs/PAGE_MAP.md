@@ -32,6 +32,7 @@ All listed HTML files currently contain only a placeholder comment. They are pla
 | `src/pages/admin/reports.html` | Reports queue | STARTER/SCAFFOLD ONLY |
 | `src/pages/admin/report-detail.html` | Review one report | STARTER/SCAFFOLD ONLY |
 | `src/pages/admin/listing-moderation.html` | Listing moderation | STARTER/SCAFFOLD ONLY |
+| `src/pages/admin/account-deletion-review.html` | Review and process admin-assisted account deletion requests | STARTER/SCAFFOLD ONLY |
 | `src/pages/account/favourites/README.md` | Reserved location if later approved | OPEN / POST-MVP; no page or feature |
 
 User journeys, permissions and requirements are defined in the project documentation. No forms, navigation, styling, Firebase calls, or interactions are present in these page files.
