@@ -1,17 +1,18 @@
 # Implementation status
 
-Last reviewed: 2026-10-08. Status describes the current skeleton, not the eventual product.
+Last reviewed: 2026-10-08. Status distinguishes setup evidence from marketplace functionality.
 
 | Area | Status | Evidence / boundary |
 |---|---|---|
-| Project/product/security documentation | IMPLEMENTED — NOT YET TESTED | Documentation files exist; this does not mean requirements are implemented. |
-| Source folder map and page placeholders | IMPLEMENTED — NOT YET TESTED | `src/` has placeholder-only HTML/CSS/JS and directory markers. |
-| Marketplace features (accounts, verification, listings, messaging, reports, admin, deletion) | NOT IMPLEMENTED | No application logic or functioning pages. |
-| Firebase project connection/client initialization | NOT IMPLEMENTED | No project IDs or client integration. |
-| Firestore/Storage Security Rules | NOT IMPLEMENTED | `firebase/*.rules` are comment-only placeholders, not protective rules. |
-| Firebase Emulator/Hosting configuration | NOT IMPLEMENTED | `firebase/firebase.json` is empty; no emulator commands are configured. |
-| Cloud Functions | NOT IMPLEMENTED | Folders only. |
-| Automated tests | NOT IMPLEMENTED | No test cases or test runner currently present. |
-| Real student data | PENDING APPROVAL | Prohibited for development/demo until the required approvals exist. |
+| Directory and page map | IMPLEMENTED — NOT YET TESTED | Placeholder locations exist; no product behavior. |
+| Static build/Hosting preview | TESTED/PASSED | `npm run build` completed; Hosting Emulator served `/` with HTTP 200. See `TEST_REGISTER.md`. |
+| Firebase CLI/emulator configuration | IMPLEMENTED — NOT YET TESTED | Root `firebase.json` declares Auth, Firestore, Storage, Functions, Hosting and UI ports; Hosting-only preview worked. Full suite is BLOCKED pending Java. |
+| Firestore/Storage foundation Rules | IMPLEMENTED — NOT YET TESTED | Strict deny-all baseline files are connected in config. Rules have not been compiled/tested by emulators. No marketplace authorization Rules. |
+| Firestore indexes | NOT IMPLEMENTED | Valid empty indexes definition; add query-driven indexes only when needed. |
+| Functions runtime/package entry | IMPLEMENTED — NOT YET TESTED | Node 22 package/runtime entry placeholder; no Functions are implemented. |
+| Security Rules test runner | IMPLEMENTED — NOT YET TESTED | `npm run test:rules` requires actual test files and intentionally refuses an empty suite. Rules tests have not run. |
+| Authentication, listings, messaging, verification, reports, admin workflows, deletion | NOT IMPLEMENTED | No feature logic or Firebase browser SDK connection. |
+| Production Firebase connection/deployment | NOT IMPLEMENTED | No production project, alias, credentials, or deployment. |
+| Real student IDs/data | PENDING APPROVAL | Do not use until required supervisor/ethics/privacy approval is obtained. |
 
-No tests were run for this skeleton, and no feature has a TESTED/PASSED status.
+The inspected Mac has Node.js 24.21.0/npm 11.19.0 and no Java runtime. Node.js 22 is the project standard and Functions runtime; install/use it for team consistency. Full Emulator Suite startup and Rules testing remain BLOCKED until a supported JDK is installed. No feature is represented as tested.

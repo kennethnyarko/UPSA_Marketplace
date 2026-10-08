@@ -43,7 +43,9 @@ The public `users/{uid}` profile is minimal and may expose the approved index id
 
 ## Environment boundary
 
-The intended environments are local Emulator Suite, separate synthetic staging, and separate production Firebase projects. None is currently configured or connected. Future app/scripts must require explicit safe environment selection and must not silently fall back to production. Real student data remains prohibited pending required approval.
+The local Emulator Suite is configured with emulator-only ID `demo-upsa-marketplace`; no real Firebase project is connected. Staging and production remain separate future Firebase projects. App/scripts must require explicit safe environment selection and must not silently fall back to production. Real student data remains prohibited pending required approval.
+
+Editable browser source lives in `src/`. `scripts/build-static.mjs` copies the supported source folders plus `public/assets/` and `public/favicon/` into ignored `dist/`; Firebase Hosting Emulator serves only `dist/`. This keeps documentation, Functions source, and test fixtures outside the public hosting root while avoiding a framework or bundler.
 
 ## Technology choices
 

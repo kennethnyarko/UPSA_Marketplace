@@ -1,0 +1,19 @@
+{
+  "name": "upsa-marketplace",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local development tools for the UPSA Marketplace project",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build-static.mjs",
+    "serve": "npm run build && firebase emulators:start --only hosting --project demo-upsa-marketplace",
+    "emulators": "npm run build && firebase emulators:start --project demo-upsa-marketplace",
+    "test:rules": "node scripts/test-rules.mjs"
+  },
+  "devDependencies": {
+    "@firebase/rules-unit-testing": "4.0.1",
+    "firebase-tools": "15.30.2"
+  }
+}

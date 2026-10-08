@@ -1,1 +1,10 @@
-// Placeholder only. Firestore Security Rules are not defined.
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Foundation baseline: deny every client read/write until feature Rules exist.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

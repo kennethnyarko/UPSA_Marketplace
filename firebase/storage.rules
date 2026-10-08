@@ -1,1 +1,10 @@
-// Placeholder only. Storage Security Rules are not defined.
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Foundation baseline: deny every client read/write until feature Rules exist.
+    match /{object=**} {
+      allow read, write: if false;
+    }
+  }
+}

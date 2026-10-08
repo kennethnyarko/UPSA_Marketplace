@@ -1,1 +1,1 @@
-Future non-secret client configuration belongs here. No Firebase project is connected.
+Future non-secret client configuration and explicit local emulator selection belong here. Current emulator endpoints are documented in `docs/LOCAL_DEVELOPMENT.md`; no browser Firebase initialization or production project connection exists.

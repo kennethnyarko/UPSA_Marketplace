@@ -1,18 +1,21 @@
 # UPSA Marketplace
 
-This repository is currently a **file and folder skeleton only** for the proposed verified UPSA student marketplace. It is intended to help Marketing and IT students understand what the team plans to build and where future work belongs.
+UPSA Marketplace is a planned verified student marketplace. This repository now has the local development foundation and file map; **marketplace features remain unimplemented**.
 
-There is no runnable application, package manifest, Firebase project connection, active emulator setup, Firebase Security Rules logic, Cloud Functions code, or test suite at this stage. Placeholder files are not features and must not be described as implemented.
+## First local setup
 
-## Start here
+1. Install Node.js 22 and Java JDK 11 or later (Java 17 is the team choice). See [`docs/LOCAL_DEVELOPMENT.md`](docs/LOCAL_DEVELOPMENT.md).
+2. From this folder, run `npm ci`.
+3. Run `npm run serve` for the local static preview at `http://127.0.0.1:5005/`, or `npm run emulators` to start Hosting plus Auth, Firestore, Storage, and Functions emulators.
+4. Stop emulators with Ctrl+C. Restart to clear in-memory synthetic data.
 
-1. Read [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for the high-level system idea.
-2. Read [`docs/PROJECT_STRUCTURE.md`](docs/PROJECT_STRUCTURE.md) and [`docs/PAGE_MAP.md`](docs/PAGE_MAP.md) to understand file locations.
-3. Read [`docs/DECISIONS.md`](docs/DECISIONS.md) and [`docs/IMPLEMENTATION_ROADMAP.md`](docs/IMPLEMENTATION_ROADMAP.md) before proposing changes.
-4. Use synthetic information only. Real student data and IDs require the necessary supervisor/ethics/privacy approval.
+Local scripts use only the emulator-only ID `demo-upsa-marketplace`. This is not a Firebase project. There is no production alias, credential, or deploy script in the local workflow. The current machine lacks Java, so the full emulator suite cannot start until a JDK is installed. The Hosting-only preview does not require Firebase production credentials.
 
-The approved direction is plain HTML, CSS, browser JavaScript, Firebase Authentication, Firestore, Storage, and trusted Cloud Functions where needed. No frontend framework is approved. No feature is implemented by this skeleton.
+## Where to learn the project
 
-## Documentation
+- [Architecture](docs/ARCHITECTURE.md), [structure](docs/PROJECT_STRUCTURE.md), [page map](docs/PAGE_MAP.md)
+- [Local development](docs/LOCAL_DEVELOPMENT.md), [student developer guide](docs/STUDENT_DEVELOPER_GUIDE.md), [environments](docs/ENVIRONMENTS.md)
+- [Decisions](docs/DECISIONS.md), [implementation roadmap](docs/IMPLEMENTATION_ROADMAP.md), [current status](docs/IMPLEMENTATION_STATUS.md)
+- Security guidance: `docs/SECURITY.md`, `docs/AUTHENTICATION_AND_AUTHORIZATION.md`, `docs/DATA_SECURITY.md`, `docs/THREAT_MODEL.md`, and `docs/SECURITY_CHECKLIST.md`
 
-Project, architecture, security, design, testing, and operational guidance lives in `docs/`. Current status and evidence rules are in `docs/IMPLEMENTATION_STATUS.md`, `docs/TEST_REGISTER.md`, and `docs/IMPLEMENTATION_ASSESSMENT.md`.
+All development/demo information must be synthetic. Real student ID/data remains pending required supervisor/ethics/privacy approval. The Rules currently deny all client access as a safe baseline; they are not complete or emulator-tested marketplace Rules.

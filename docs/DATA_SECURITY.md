@@ -1,6 +1,6 @@
 # Data security
 
-**Status: design guidance only.** This repository has no live Firebase Rules. The files in `firebase/` are comment-only placeholders, so they currently provide no data protection.
+**Status: design guidance plus a fail-closed Rules baseline.** Firestore and Storage Rules currently deny all client access, but have not been validated or tested by the Emulator Suite. They are not feature policies or proof of security.
 
 Classify future data as public marketplace content, private account information, highly sensitive student-ID submissions, private conversations, and restricted moderation/audit records. Keep private data out of public profiles and minimize what is retained. Student ID images should be private, restricted to named trusted reviewers, and deleted after the decision; the approved minimal verification audit follows the 12-month project retention rule.
 

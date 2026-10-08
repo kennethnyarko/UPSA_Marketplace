@@ -1,6 +1,6 @@
 # Security checklist
 
-Use this checklist during implementation reviews and before each environment release. It is a work record, not proof by itself. For each item, link the relevant test, code review, configuration, or approval evidence. No active Rules exist in this skeleton; feature permissions remain NOT IMPLEMENTED.
+Use this checklist during implementation reviews and before each environment release. It is a work record, not proof by itself. For each item, link the relevant test, code review, configuration, or approval evidence. Foundation Firestore/Storage Rules deny all client access but have not been Emulator-tested; feature permissions remain NOT IMPLEMENTED.
 
 Status vocabulary: `NOT IMPLEMENTED`, `IN PROGRESS`, `IMPLEMENTED — NOT YET TESTED`, `TESTED/PASSED`, `FAILED`, `BLOCKED`, `PENDING APPROVAL`, `POST-MVP`.
 

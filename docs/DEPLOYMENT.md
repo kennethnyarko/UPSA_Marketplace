@@ -1,7 +1,7 @@
 # Deployment plan
 
-**Status: not configured or deployed.** There is no Firebase project, deployable application, Hosting configuration, or deployment command in this skeleton.
+**Status: production/staging not configured or deployed.** The root `firebase.json` is prepared for local emulators and a static build target. It does not establish Firebase projects, credentials, Hosting sites, or deployment authorization.
 
-The intended release path is local emulators → separate staging project using synthetic data → production only after required approval and a readiness review. Before any deployment, the team must explicitly confirm the selected project ID, Auth configuration, Firestore/Storage Rules, indexes, Functions, Hosting output, secrets, rollback approach, and evidence from tests. Never use a local placeholder or copy production configuration into development.
+The intended path remains local emulators → separate staging project with synthetic data → production after the required readiness and approval gates. The local scripts only build and start emulators; they do not deploy. Do not run `firebase deploy` until the project owner has created and verified the intended target projects, both students understand the selected target, all Rules/tests have evidence, rollback and ownership are defined, and any real-data approval exists.
 
-The owner must create and control the staging/production Firebase projects and ensure at least two named project owners. Real student IDs/data must not be collected or used until supervisor/ethics/privacy approval is obtained. Do not run Firebase deployment commands against the current placeholder files.
+The owner must create and control separate staging/production Firebase projects and ensure at least two named project owners. Real student IDs/data must not be collected or used until supervisor/ethics/privacy approval is obtained.

@@ -7,7 +7,7 @@
 3. Make a small change tied to an approved requirement and update documentation/tests with it.
 4. Run relevant checks locally using emulators and synthetic data.
 5. Commit with a short imperative subject, for example `Document the local emulator workflow`.
-6. Push the branch and open a pull request when the GitHub repository is available.
+6. Push the branch to the existing `origin` remote and open a pull request.
 7. The other IT student reviews product alignment, accessibility, privacy, authorization, tests, and docs. Security-sensitive changes require a second-person review.
 8. Address feedback, confirm checks actually passed, then merge using the agreed GitHub method.
 

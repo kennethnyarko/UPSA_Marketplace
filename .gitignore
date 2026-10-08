@@ -3,7 +3,6 @@
 .env.*
 !.env.example
 .firebaserc
-config/firebase-projects.local.json
 *service-account*.json
 *-firebase-adminsdk-*.json
 *.pem
@@ -17,6 +16,7 @@ functions/node_modules/
 coverage/
 dist/
 emulator-data/
+.emulator-data/
 test-results/
 .DS_Store
 

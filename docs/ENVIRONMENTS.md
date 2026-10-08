@@ -1,11 +1,17 @@
 # Environments
 
-**Status: planned; none are configured or connected.** This document records the intended separation, not a live setup.
+## Local
 
-- **Local:** Firebase Emulator Suite, synthetic data only.
-- **Staging:** separate Firebase project, synthetic data only.
-- **Production:** separate Firebase project. Real student data is prohibited until required approval.
+Local development uses the Firebase Emulator Suite with project ID `demo-upsa-marketplace`. This is an emulator-only ID, not a created Firebase project. Scripts pass it explicitly; no production alias or credential is required. Emulator configuration is in root `firebase.json`; instructions and ports are in `LOCAL_DEVELOPMENT.md`.
 
-Each environment must explicitly identify its Firebase project, Authentication, Firestore, Storage and Functions configuration. Local development must target emulators and fail closed if configuration is missing; it must never silently fall back to production. Project IDs and local configuration belong outside committed source where appropriate; secrets and service-account keys must never be committed.
+No emulator data is imported or exported by default. Data exists only during the emulator process and resets after stopping it. Use synthetic data only. Do not run deploy commands as part of local work.
 
-There is currently no `.firebaserc`, active `firebase.json` configuration, project ID, emulator port map, deploy command, or connected Firebase project. `firebase/firebase.json` is an empty placeholder. Do not run Firebase commands against this skeleton or treat the placeholder as deployable. When implementation starts, document exact setup and verify emulator connections before creating test data.
+## Staging and production
+
+Staging and production must be separate Firebase projects, created and owned by the project owner. Neither is configured in this repository. Staging uses synthetic data. Real student IDs and data are prohibited until required supervisor/ethics/privacy approval is documented.
+
+The web app must require an explicit environment and fail closed. Never silently fall back from missing local configuration to a hosted Firebase project. Never commit `.firebaserc`, service-account credentials, private keys, student data, or ID images.
+
+## Tool requirements
+
+Project standard: Node.js 22 for local tooling and the Cloud Functions runtime. Firebase CLI is pinned as a local development dependency. Firestore Emulator requires Java JDK 11 or later; use Java 17 as the team choice. The current development Mac has Node.js 24.21.0/npm 11.19.0 but no Java runtime, so starting the full emulator suite remains blocked until Java is installed.

@@ -1,6 +1,6 @@
 # Authentication and authorization
 
-**Status:** Approved design, not implemented. This document describes intended access behavior; Firebase configuration is absent and the rule files are comment-only placeholders, not an active deny-by-default policy.
+**Status:** Approved design, not implemented. This document describes intended access behavior; Firebase emulator configuration exists, and the Rules files currently deny all client access. Emulator validation has not been performed, and feature authorization is not implemented.
 
 ## Core distinction
 
